@@ -1,0 +1,24 @@
+<html>
+<head>
+{% load staticfiles %}
+{% block meta %}
+{% endblock meta %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static "SoftwareSnippets/css/style.css" %}" />
+<link rel="stylesheet" href="{% static "SoftwareSnippets/css/foundation.css" %}" />
+{% endblock stylesheets %}
+
+{% block scripts %}
+{% endblock scripts %}
+</head>
+
+<body>
+{% include 'SoftwareSnippets/header.html' %}
+{% block content %}
+
+{% endblock content %}
+{% include 'SoftwareSnippets/footer.html' %}
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+body {
+	/*background-color: #45565C;*/
+	/* background-color: #566c73; */
+	background-color: #FFF;
+}
+
+.snippetRow {
+	/* background-color: #ADDAE6; */
+	margin-top: 25px;
+}
+
+.panel {
+	background-color: #DDD;
+
+}
+
+.panel .panel {
+	background-color: #EEE;
+}
+
+.snippetRow .snippetTitle a {
+	color: #F90;
+}
+
+.snippetRow .snippetTitle a:hover {
+	color: #D50;
+	cursor: pointer;
+}
+
+.snippetRow .snippetDescriptionHeader {
+	color: #333;
+}
+
+.snippetRow .snippetDescription {
+	color: #333;
+}
+
+.side-nav li a:not(.button) {
+	color: #333;
+}
+
+.snippetRow .codeContainer {
+	max-height: 300px;
+	overflow: auto;
+}
+
+.highlight {
+	background-color: #EEE;
+}
+
+#submitEvent {
+	background-color: #F90;
+}
+
+#submitEvent:hover {
+	background-color: #D50;
+}
