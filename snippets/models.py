@@ -15,11 +15,7 @@ class Snippet(models.Model):
 		return highlight(self.code, HtmlLexer(), HtmlFormatter())
 		# return formatted code from pygments
 
-class AnimalTestCase(unittest.TestCase):
-    def setUp(self):
-        self.lion = Animal.objects.create(name="lion", sound="roar")
-        self.cat = Animal.objects.create(name="cat", sound="meow")
-
-    def testSpeaking(self):
+class SnippetTest(unittest.TestCase):
+    def code_formatted_test(self):
         self.assertEqual(self.lion.speak(), 'The lion says "roar"')
         self.assertEqual(self.cat.speak(), 'The cat says "meow"')
