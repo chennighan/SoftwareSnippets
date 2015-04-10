@@ -1,0 +1,133 @@
+body {
+	/*background-color: #45565C;*/
+	/* background-color: #566c73; */
+	background-color: #FFF;
+}
+
+.snippetRow {
+	/* background-color: #ADDAE6; */
+	margin-top: 25px;
+}
+
+.panel {
+	background-color: #DDD;
+
+}
+
+.panel .panel {
+	background-color: #EEE;
+}
+
+.snippetRow .snippetTitle a {
+	color: #F90;
+}
+
+.snippetRow .snippetTitle a:hover {
+	color: #D50;
+	cursor: pointer;
+}
+
+.snippetRow .snippetDescriptionHeader {
+	color: #333;
+}
+
+.snippetRow .snippetDescription {
+	color: #333;
+}
+
+.side-nav li a:not(.button) {
+	color: #333;
+}
+
+.snippetRow .codeContainer {
+	max-height: 300px;
+	overflow: auto;
+}
+
+.highlight {
+	background-color: #EEE;
+}
+
+#submitEvent {
+	background-color: #F90;
+}
+
+#submitEvent:hover {
+	background-color: #D50;
+}
+
+select {
+	background-image: none;
+}
+
+body {
+	background-color: #7f8c8d;
+}
+
+.index-container {
+	border-style: solid;
+	border-width: 5px;
+	border-color: #bdc3c7;
+}
+
+.small-snippet-container {
+	height: 75px;
+}
+
+
+.small-snippet-container h6 {
+	font-size: 15px;
+	margin: 0 auto;
+	color: #ecf0f1;
+}
+
+.top-attach {
+	margin-top: -20px;
+}
+
+.code-preview-container {
+	padding: 10px;
+	height: 150px;
+}
+
+.code-preview-container:hover {
+	background-color: #000;
+	opacity: .5;
+	cursor: pointer;
+}
+
+.code-preview {
+	overflow: hidden;
+}
+
+.emerald {
+	background-color: #2ecc71;
+}
+
+.silver {
+	background-color: #bdc3c7;
+}
+
+.asbestos {
+	background-color: #7f8c8d;
+}
+
+.green-sea {
+	background-color: #16a085;
+}
+
+.charcoal {
+	background-color: #333;
+}
+
+.charcoal h1,h2,h3,h4,h5,h6 {
+	color: #ecf0f1;
+}
+
+.clouds {
+	background-color: #ecf0f1;
+}
+
+.emerald p {
+	color: #2c3e50;
+}

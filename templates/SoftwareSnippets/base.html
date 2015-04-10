@@ -1,24 +1,39 @@
 <html>
-<head>
-{% load staticfiles %}
-{% block meta %}
-{% endblock meta %}
+	<head>
+	{% load staticfiles %}
 
-{% block stylesheets %}
-<link rel="stylesheet" href="{% static "SoftwareSnippets/css/style.css" %}" />
-<link rel="stylesheet" href="{% static "SoftwareSnippets/css/foundation.css" %}" />
-{% endblock stylesheets %}
+	<!-- metadata start -->
+	{% block meta %}{% endblock meta %}
+	<!-- metadata end -->
 
-{% block scripts %}
-{% endblock scripts %}
-</head>
+	<!-- stylesheets start -->
+	{% block stylesheets %}
+		{% include 'SoftwareSnippets/stylesheets.html' %}
+	{% endblock stylesheets %}
+	<!-- stylesheets end -->
+	</head>
 
-<body>
-{% include 'SoftwareSnippets/header.html' %}
-{% block content %}
+	<body>
+	<!-- header start -->
+	{% block header %}
+		{% include 'SoftwareSnippets/header.html' %}
+	{% endblock header %}
+	<!-- header end -->
 
-{% endblock content %}
-{% include 'SoftwareSnippets/footer.html' %}
-</body>
+	<!-- content start -->
+	{% block content %}{% endblock content %}
+	<!-- content end -->
 
+	<!-- footer start -->
+	{% block footer %}
+		{% include 'SoftwareSnippets/footer.html' %}
+	{% endblock footer %}
+	<!-- footer end -->
+
+	<!-- javascripts start *load last for faster load times* -->
+	{% block javascripts %}
+		{% include 'SoftwareSnippets/javascripts.html' %}
+	{% endblock javascripts %}
+	<!-- javascripts end -->
+	</body>
 </html>

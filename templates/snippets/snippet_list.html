@@ -8,12 +8,10 @@
 <style>
 	{% pygment_style %}
 </style>
-<link rel="stylesheet" href="{% static "snippets/css/style.css" %}" />
+<link rel="stylesheet" href="{% static "css/style.css" %}" />
 {% endblock stylesheets %}
 
 {% block content %}
-{{ block.super }}
-
 {% for snippet in snippets %}
 <div class="row snippetRow panel radius">
 	<div class="small-12 columns">

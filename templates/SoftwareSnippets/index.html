@@ -1,0 +1,45 @@
+{% extends 'SoftwareSnippets/base.html' %}
+
+{% load pygment_style %}
+{% load staticfiles %}
+
+{% block stylesheets %}
+{{ block.super }}
+<style>
+	{% pygment_style %}
+</style>
+<link rel="stylesheet" href="{% static "css/style.css" %}" />
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="row">
+   <div class="large-12 columns">
+      <div class="hide-for-small">
+         <div id="featured"><img alt="slide image" src="http://placehold.it/1000x400&amp;text=Software%20Snippets"></div>
+      </div>
+      <div class="row">
+         <div class="small-12 show-for-small"><br>
+            <img src="http://placehold.it/1000x600&amp;text=For%20Small%20Screens">
+         </div>
+      </div>
+   </div>
+</div>
+<br>
+<div class="row">
+   <div class="large-12 columns">
+      <div class="row">
+      	{% for snippet in snippets %}
+         <div class="large-3 small-6 columns">
+         	<div class="panel code-preview-container">
+            	<div class="code-preview">{{ snippet.code_formatted | safe }}</div>
+            </div>
+            <div class="panel small-snippet-container top-attach charcoal">
+	            <h6 class="clouds-f" align="center">{{ snippet.title }}</h6>
+	        </div>
+	       	<a href="/snippets/" class="button small expand primary top-attach">Go to Snippet</a>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</div>
+{% endblock content %}

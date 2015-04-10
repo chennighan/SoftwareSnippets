@@ -1,6 +1,6 @@
 from django.db import models
 from pygments import highlight
-from pygments.lexers import HtmlLexer,JavascriptLexer
+from pygments.lexers import get_lexer_by_name, guess_lexer, get_all_lexers
 from pygments.formatters import HtmlFormatter
 from django.utils import unittest
 
@@ -9,13 +9,12 @@ class Snippet(models.Model):
 	title = models.CharField(max_length=128)
 	description = models.TextField()
 	code = models.TextField()
+	language = models.CharField(max_length=128)
 	creation_date = models.DateTimeField()
 
-	def code_formatted(self):
-		return highlight(self.code, HtmlLexer(), HtmlFormatter())
-		# return formatted code from pygments
+	def __unicode__(self):
+		return self.language
 
-class SnippetTest(unittest.TestCase):
-    def code_formatted_test(self):
-        self.assertEqual(self.lion.speak(), 'The lion says "roar"')
-        self.assertEqual(self.cat.speak(), 'The cat says "meow"')
+	def code_formatted(self):
+		return highlight(self.code, get_lexer_by_name(self.language), HtmlFormatter())
+		# return formatted code from pygments
